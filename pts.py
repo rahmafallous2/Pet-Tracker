@@ -4,16 +4,14 @@ class Pet:
         self.species = species
         self.age = age
         self.adopted = adopted
-    def print(self):
+    def display_info(self):
         if self.adopted == True:
             print(f"{self.name} is a {self.age}-year-old {self.species} who has been adopted.")
         else:
             print(f"{self.name} is a {self.age}-year-old {self.species} who is not adopted yet.")
+    def mark_adopted(self):
+        self.adopted = True
+    def birthday(self):
+        self.age += 1
 
 
-
-pet1 = Pet("Rocky", "dog", 2)
-pet2 = Pet("Luna", "cat", 5, True)
-
-pet1.print()
-pet2.print()
